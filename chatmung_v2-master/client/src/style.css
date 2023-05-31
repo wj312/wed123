@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+}
+
+.base {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 70px 0;
+}
+
+.dark {
+    background-color: #292929;
+}
+
+.light {
+    background-color: #fff;
+}
+
+.dogSays {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dogSays img {
+    width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.dogText {
+    width: 450px;
+    font-family: 'DungGeunMo';
+    font-size: 18px;
+    z-index: 101;
+}
+
+
+.dog {
+    width: 350px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.inputStyle {
+    width: 60vw;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    border: solid 1px #1581ff;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.inputStyle:focus {
+    border: solid 2px #0027ff;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.button {
+    width: 200px;
+    background: #1581ff;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0027ff;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .base {
+        padding: 200px 0;
+    }
+    .dogSays {
+        height: calc(90vw * 0.3);
+
+    }
+    .dogSays img {
+        width: 90vw;
+    }
+
+    .dogText {
+        font-size: 14px;
+    }
+
+    .dog {
+        width: 200px;
+        height: 200px;
+    }
+
+    .inputStyle {
+        width: 80vw;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 30px;
+    }
+
+    .button {
+        width: fit-content;
+        background: #1581ff;
+        padding: 5px 30px;
+        font-size: 14px;
+    }
+
+
+}
